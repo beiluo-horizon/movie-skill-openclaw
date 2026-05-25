@@ -1,0 +1,37 @@
+[project]
+name = "movie-skill"
+version = "0.1.0"
+description = "影视资源 CLI 工具链 - 搜索+下载+播放(OpenClaw SKILL)"
+requires-python = ">=3.14"
+dependencies = [
+    "typer>=0.24",
+    "rich>=13",
+    "httpx>=0.28",
+    "parsel>=1.9",
+    "lxml>=5.3",
+    "rapidfuzz>=3.14",
+    "pyyaml>=6.0",
+    "pydantic>=2.0",
+    "jieba>=0.42",
+    "fake-useragent>=2.1",
+]
+
+[project.scripts]
+movie-crawl = "movie_skill.cli:app"
+movie-dl = "movie_skill.downloader.cli:app"
+movie-play = "movie_skill.player.cli:app"
+movie-skill = "movie_skill.skill.cli:app"
+
+[project.optional-dependencies]
+wizard = ["questionary>=2.1"]
+guessit = ["guessit>=3.8"]
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.uv]
+dev-dependencies = ["pytest>=8", "pytest-asyncio>=0.24"]
