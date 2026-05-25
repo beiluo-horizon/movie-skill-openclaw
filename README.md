@@ -14,7 +14,7 @@
 ```
 你说 "分步看权力的游戏第三季第五集"
      ↓
-  movie-crawl 搜索 3 个站点 → 展示结果让你选
+  movie-crawl 多站点搜索 → 展示结果让你选
      ↓
   movie-dl 调用迅雷下载你选的磁力
      ↓
@@ -36,7 +36,8 @@
 |------|------|
 | clm34.top | 磁力搜索引擎 |
 | dygod.vip | 帝国CMS 影视站 |
-| u3c3u3c3.u3c3u3c3u3c3.com | Gazelle BT 追踪器 |
+
+> 更多站点可通过 `~/.movie_skill/sites.yaml` 配置扩展，支持自定义 CSS/XPath 选择器。
 
 ## 安装
 
